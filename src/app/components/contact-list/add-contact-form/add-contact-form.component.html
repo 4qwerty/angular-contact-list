@@ -1,0 +1,24 @@
+<button class="btn" *ngIf="!isShowForm" (click)="showForm()">Додати новий контакт</button>
+
+<form class="form" *ngIf="isShowForm" [formGroup]="addContactForm">
+    <div class="form__body">
+        <div class="form-group">
+            <input type="text" placeholder="Імя" formControlName="name" class="input">
+            <small *ngIf="name?.invalid && name?.touched" class="form__error-text">Неправильно введене імя</small>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" placeholder="Телефон" formControlName="phone" class="input">
+            <small *ngIf="email?.invalid && email?.touched" class="form__error-text">Неправильно введений телефон</small>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Електронна пошта" formControlName="email" class="input">
+            <small *ngIf="phone?.invalid && phone?.touched" class="form__error-text">Неправильно введена пошта</small>
+        </div>
+    </div>
+    <div class="form__footer">
+        <button type="submit" class="btn" (click)="onSubmit()" [disabled]="!addContactForm.valid">
+            Створити контакт
+        </button>
+    </div>
+</form>

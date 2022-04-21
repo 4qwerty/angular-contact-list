@@ -1,0 +1,12 @@
+:host {
+    display: block;
+
+    .input {
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        line-height: 22px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+:host {
+    .contact {
+        display: flex;
+        align-items: center;
+        border: 1px solid #cccccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .name {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .email {
+        color: rgb(0, 0, 0);
+        text-decoration: none,;
+    }
+    .remove {
+        color: rgb(232, 54, 54);
+        margin-left: auto;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+    }
+}
